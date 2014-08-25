@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Container.h"
 #import "Ball.h"
-#define SMALL_BALL_RADIUS 15.0f
+#define SMALL_BALL_RADIUS 5.0f
 #define CONTAINER_RADIUS 120.0f
 
 @interface MarbleJarViewController : UIViewController
 
 @property (strong, nonatomic) Container* jar;
-@property (strong, nonatomic) Ball* marble;
+@property (strong, nonatomic) NSMutableArray* marbles;
 @property (strong, nonatomic) UIDynamicAnimator* animator;
+@property (strong, nonatomic) UICollisionBehavior* collisionBehavior;
+@property (strong, nonatomic) UIGravityBehavior* gravityBehavior;
+@property (strong, nonatomic) NSTimer* dropBallTimer;
 
 @end
